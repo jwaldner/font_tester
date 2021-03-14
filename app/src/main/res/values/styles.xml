@@ -5,6 +5,31 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    <!--
+    the style changes only if the slider style is added the AppTheme :-(
+     <item name="sliderStyle">@style/Widget.App.Slider</item>-->
+
+    </style>
+
+    <style name="Widget.App.Slider" parent="Widget.MaterialComponents.Slider">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Slider</item>
+        <item name="labelStyle">@style/Widget.App.Tooltip</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Slider" parent="">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.App.Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textAppearance">@style/TextAppearance.App.Tooltip</item>
+    </style>
+
+    <style name="TextAppearance.App.Tooltip" parent="TextAppearance.MaterialComponents.Tooltip">
+        <item name="fontFamily">@font/cedarville_cursive_regular</item>
+        <item name="android:fontFamily">@font/cedarville_cursive_regular</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -15,20 +40,4 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="Myslider" parent="@style/Widget.MaterialComponents.Slider">
-        <item name="labelStyle">@style/My_Tooltip</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.Slider</item>
-        <item name="android:fontFamily">@font/roboto</item>
-    </style>
-
-    <style name="My_Tooltip" parent="Widget.MaterialComponents.Tooltip">
-        <!-- font for your slider  tooltip -->
-        <item name="android:fontFamily">@font/noto_sans_sc_black</item>
-    </style>
-
-    <style name="ThemeOverlay.Slider" parent="">
-        <item name="android:fontFamily">@font/roboto</item>
-    </style>
-
 </resources>

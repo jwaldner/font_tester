@@ -40,7 +40,7 @@ class FirstFragment : Fragment() {
 
         val newContext = ContextThemeWrapper(
             context,
-            R.style.Myslider
+            R.style.Widget_App_Slider
         )
 
         val custom = Slider(newContext)
